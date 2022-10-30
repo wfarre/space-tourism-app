@@ -1,0 +1,20 @@
+.bg-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  &--mobile {
+    @include desktop-only() {
+      display: none;
+    }
+  }
+  &--desktop {
+    display: none;
+    @include desktop-only() {
+      display: block;
+    }
+  }
+  //   background-image: url(../../public/assets/home/background-home-desktop.jpg);
+}

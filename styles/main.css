@@ -1,0 +1,586 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&family=Barlow&display=swap");
+.hide {
+  display: none;
+}
+@media all and (min-width: 800px) {
+  .hide {
+    display: block;
+  }
+}
+
+.nav {
+  font-size: 16px;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+@media all and (min-width: 800px) {
+  .nav {
+    padding-left: 56px;
+    padding-top: 40px;
+    padding-right: 0;
+  }
+}
+.nav .logo-wrapper {
+  position: relative;
+  height: 40px;
+  width: 40px;
+}
+@media all and (min-width: 800px) {
+  .nav .logo-wrapper {
+    height: 48px;
+    width: 48px;
+  }
+}
+.nav .logo-wrapper .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.nav .navbar-wrapper {
+  position: relative;
+  padding-left: 8.5%;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  height: 100vh;
+  padding-top: 118px;
+  top: 0px;
+  right: 0;
+  z-index: 900;
+}
+@media all and (min-width: 800px) {
+  .nav .navbar-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 96px;
+    padding-top: 0;
+    padding-right: 11.5%;
+  }
+}
+.nav .navbar-wrapper::after {
+  content: " ";
+  position: absolute;
+  width: 32.8vw;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  right: 94.4%;
+  backdrop-filter: blur(8px);
+}
+.nav .navbar {
+  display: flex;
+  gap: 3vw;
+  flex-direction: column;
+  row-gap: 32px;
+  color: #ffffff;
+  padding: 0;
+  margin: 0;
+  width: 68vw;
+}
+@media all and (min-width: 800px) {
+  .nav .navbar {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: auto;
+  }
+}
+.nav .navbar--item {
+  position: relative;
+  list-style-type: none;
+  text-transform: uppercase;
+  letter-spacing: 2.7px;
+  z-index: 10;
+  width: 100%;
+}
+@media all and (min-width: 800px) {
+  .nav .navbar--item {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+.nav .navbar--item:hover {
+  cursor: pointer;
+}
+.nav .navbar--item:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  height: 100%;
+}
+@media all and (min-width: 800px) {
+  .nav .navbar--item:hover::after {
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+.nav .navbar--item--id {
+  letter-spacing: 0;
+  font-weight: 700;
+  margin-right: 14px;
+}
+.nav .hamburger-btn-wrapper {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  z-index: 999;
+}
+@media all and (min-width: 800px) {
+  .nav .hamburger-btn-wrapper {
+    display: none;
+  }
+}
+.nav .hamburger-btn-wrapper .button--hamburger {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.nav .hamburger-btn-wrapper .button--close {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  margin: 0 11.46vw;
+  text-align: center;
+  margin-top: 48px;
+}
+@media all and (min-width: 800px) {
+  .header {
+    margin: 0 11.46%;
+    margin-top: 28vh;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+@media all and (min-width: 800px) {
+  .header__info {
+    width: 450px;
+  }
+}
+.header__info__sub {
+  font-family: "Barlow Condensed";
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: 400;
+}
+@media all and (min-width: 800px) {
+  .header__info__sub {
+    font-size: 28px;
+  }
+}
+.header__info__main {
+  font-family: "Bellefair";
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+@media all and (min-width: 800px) {
+  .header__info__main {
+    font-size: 150px;
+    margin-top: 6.4vh;
+    margin-bottom: 2.7vh;
+  }
+}
+.header__info__text {
+  font-weight: 100;
+  line-height: 28px;
+  margin: 0;
+}
+@media all and (min-width: 800px) {
+  .header__info__text {
+    line-height: 32px;
+  }
+}
+.header .cta .button--cta {
+  background-color: #ffffff;
+  font-family: "Bellefair";
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-size: 20px;
+  height: 150px;
+  width: 150px;
+  border: none;
+  border-radius: 100%;
+  margin-top: 81px;
+}
+@media all and (min-width: 800px) {
+  .header .cta .button--cta {
+    position: relative;
+    font-size: 32px;
+    height: 274px;
+    width: 274px;
+    z-index: 1;
+  }
+  .header .cta .button--cta:hover {
+    cursor: pointer;
+  }
+  .header .cta .button--cta:hover::before {
+    content: " ";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border-radius: 100%;
+    opacity: 0.1;
+    z-index: 0;
+  }
+}
+
+.bg-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+@media all and (min-width: 800px) {
+  .bg-img--mobile {
+    display: none;
+  }
+}
+.bg-img--desktop {
+  display: none;
+}
+@media all and (min-width: 800px) {
+  .bg-img--desktop {
+    display: block;
+  }
+}
+
+body {
+  font-family: "Barlow";
+  background-color: #0b0d17;
+  color: #ffffff;
+  font-size: 15px;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  color: #d0d6f9;
+  font-weight: 100;
+}
+@media all and (min-width: 800px) {
+  body {
+    font-size: 18px;
+    position: relative;
+  }
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carousel .carousel__nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  top: 196px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 800;
+}
+.carousel .carousel__nav .dot {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+.carousel .carousel__nav .active {
+  opacity: 1;
+}
+.carousel .carousel__nav .option__name {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #d0d6f9;
+  font-weight: 100;
+  font-family: "Barlow Condensed";
+  letter-spacing: 2.36px;
+}
+.carousel .carousel__nav .active {
+  position: relative;
+}
+.carousel .carousel__nav .active .option__name {
+  color: #ffffff;
+}
+.carousel .carousel__nav .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+}
+.carousel .carousel__viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  position: relative;
+  width: calc(100vw - 48px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+}
+.slide__info {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.slide__info__main {
+  position: relative;
+  padding-bottom: 32px;
+}
+.slide__info__main__title {
+  font-size: 56px;
+  font-family: "Bellefair";
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  margin-top: 74px;
+}
+.slide__info__main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 0.5;
+}
+.slide__info__extra {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.slide__info__extra__distance__title {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.36px;
+  margin: 0;
+  margin-bottom: 29px;
+}
+.slide__info__extra__distance__data {
+  font-family: "Bellefair";
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 0;
+}
+.slide__info__extra__travel__title {
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.36px;
+  margin: 0;
+  margin-bottom: 29px;
+}
+.slide__info__extra__travel__data {
+  font-family: "Bellefair";
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 28px;
+  margin: 0;
+}
+.slide__picture {
+  position: relative;
+  width: 170px;
+  height: 170px;
+}
+.slide__picture .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 32px;
+  margin-top: 24px;
+}
+.page-header__title {
+  color: #ffffff;
+  font-family: "Barlow Condensed";
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+.page-header__title .page-index {
+  font-weight: bold;
+  margin-right: 18px;
+  opacity: 0.5;
+}
+
+.section--crew .carousel__nav {
+  gap: 30px;
+  top: 287px;
+}
+.section--crew .carousel__nav .active::after {
+  display: none;
+}
+.section--crew .slide__info__main {
+  padding-top: 100px;
+}
+.section--crew .slide__info__main__subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Bellefair";
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.section--crew .slide__info__main__title {
+  font-size: 24px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.section--crew .slide__info__main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  opacity: 0.1;
+}
+.section--crew .slide__info__extra {
+  display: none;
+}
+.section--crew .slide__picture {
+  position: relative;
+  width: 327px;
+  height: 223px;
+}
+.section--crew .slide__picture .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+.section--technology .carousel__nav {
+  gap: 30px;
+  top: 204px;
+}
+.section--technology .carousel__nav .dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #ffffff;
+  opacity: 1;
+  background-color: transparent;
+  color: #ffffff;
+}
+.section--technology .carousel__nav .active {
+  background-color: #ffffff;
+  color: #0b0d17;
+  font-family: "Bellefair";
+  font-size: 16px;
+}
+.section--technology .carousel__nav .active::after {
+  display: none;
+}
+.section--technology .slide {
+  padding: 0;
+  width: 100%;
+}
+.section--technology .slide__info__main {
+  padding: 0 24px;
+  padding-top: 100px;
+}
+.section--technology .slide__info__main__subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Barlow Condensed";
+  text-transform: uppercase;
+  letter-spacing: 2.36px;
+}
+.section--technology .slide__info__main__title {
+  font-size: 24px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+.section--technology .slide__info__main::after {
+  display: none;
+}
+.section--technology .slide__info__extra {
+  display: none;
+}
+.section--technology .slide__picture {
+  position: relative;
+  width: 100%;
+  height: 170px;
+}
+.section--technology .slide__picture .image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=main.css.map */
