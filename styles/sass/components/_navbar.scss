@@ -108,13 +108,14 @@
       height: 100%;
       width: auto;
     }
-    &--item {
+    &__item {
       position: relative;
       list-style-type: none;
       text-transform: uppercase;
       letter-spacing: 2.7px;
       z-index: 10;
       width: 100%;
+
       //   padding-right: 11.5%;
 
       @include desktop-only() {
@@ -143,10 +144,16 @@
         }
       }
 
-      &--id {
+      &__title {
+        color: $color-primary;
+        text-decoration: none;
+      }
+
+      &__id {
         letter-spacing: 0;
         font-weight: 700;
         margin-right: 14px;
+        color: $color-primary;
       }
     }
   }
