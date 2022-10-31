@@ -9,6 +9,12 @@ const Technology = (props: Props) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState();
   const [index, setIndex] = useState(0);
+  const [desktop, setDesktop] = useState(true);
+
+  const [matches, setMatches] = useState(
+    typeof window !== "undefined" &&
+      window.matchMedia("(min-width: 768px)").matches
+  );
 
   useEffect(() => {
     fetch("../json/data.json")
@@ -43,6 +49,14 @@ const Technology = (props: Props) => {
 
     setIndex(index);
   };
+
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 768px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
+  // }
+  console.log(matches);
 
   return (
     <div>
@@ -79,7 +93,11 @@ const Technology = (props: Props) => {
                 return (
                   <Slide
                     key={technology.name}
-                    img={technology.images.landscape}
+                    img={
+                      matches
+                        ? technology.images.portrait
+                        : technology.images.landscape
+                    }
                     name={technology.name}
                     role={"the terminlogy..."}
                     description={technology.description}

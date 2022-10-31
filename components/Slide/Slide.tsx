@@ -27,7 +27,7 @@ const Slide = (props: Props) => {
         <div className="slide__info__main">
           <h3 className="slide__info__main__subtitle">{props.role}</h3>
           <h2 className="slide__info__main__title">{props.name}</h2>
-          <p className="description">{props.description}</p>
+          <p className="slide__info__main__description">{props.description}</p>
         </div>
 
         <div className="slide__info__extra">

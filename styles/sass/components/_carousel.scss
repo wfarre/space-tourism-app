@@ -1,0 +1,87 @@
+.carousel {
+  // width: calc(100% - 48px);
+  // width: fit-content;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  margin-top: 32px;
+  @include desktop-only() {
+    margin-top: 97px;
+  }
+
+  .carousel__nav {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    top: 196px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 800;
+    @include desktop-only() {
+      position: absolute;
+      top: 0;
+      left: 832px;
+      transform: translateX(0);
+
+      // margin-top: 64px;
+    }
+    .dot {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: $color-primary;
+      opacity: 0.5;
+    }
+    .active {
+      // background-color: blue;
+      opacity: 1;
+    }
+    .option {
+      &__name {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $color-secondary;
+        font-weight: 100;
+        font-family: "Barlow Condensed";
+        letter-spacing: 2.36px;
+
+        @include desktop-only() {
+          font-size: 16px;
+          letter-spacing: 2.7px;
+        }
+      }
+    }
+
+    .active {
+      position: relative;
+      .option__name {
+        color: $color-primary;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  .carousel__viewport {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+}
