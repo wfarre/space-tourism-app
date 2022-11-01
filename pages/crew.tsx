@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Slide from "../components/Slide/Slide";
 
 import Image from "next/image";
+import Head from "next/head";
 
 import bgImgMobile from "../public/assets/crew/background-crew-mobile.jpg";
 import bgImgTablet from "../public/assets/crew/background-crew-mobile.jpg";
@@ -51,6 +52,10 @@ const Crew = (props: Props) => {
 
   return (
     <div>
+      <Head>
+        <title>Space Tourism - Home</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <Image alt="" src={bgImgMobile} fill className="bg-img bg-img--mobile" />
       <Image alt="" src={bgImgTablet} fill className="bg-img bg-img--tablet" />
       <Image
