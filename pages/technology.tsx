@@ -77,6 +77,7 @@ const Technology = (props: Props) => {
       <Header index={"03"} title={"Space launch 101"} />
       <main className="main">
         <section className="section section--technology">
+          <h2 hidden>Technology</h2>
           <div className="carousel">
             <div className="carousel__nav">
               <div

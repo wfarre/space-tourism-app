@@ -71,7 +71,16 @@
   }
 
   .cta {
+    display: flex;
+    justify-content: center;
+    .link {
+      text-decoration: none;
+      color: $bg-color;
+    }
     .button--cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       height: 150px;
       width: 150px;
       margin-top: 81px;
@@ -82,6 +91,7 @@
       text-transform: uppercase;
       letter-spacing: 1.25px;
       font-size: 20px;
+      text-decoration: none;
 
       @include tablet-only {
         height: 242px;

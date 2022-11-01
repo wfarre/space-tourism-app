@@ -68,6 +68,7 @@ const Crew = (props: Props) => {
       <Header index={"02"} title={"Meet your crew"} />
 
       <section className="section section--crew">
+        <h2 hidden>Crew</h2>
         <div className="carousel">
           <div className="carousel__nav">
             <div

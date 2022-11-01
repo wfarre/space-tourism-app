@@ -92,7 +92,7 @@ const Navbar = (props: Props) => {
         />
         <Image
           src="/assets/shared/icon-close.svg"
-          alt="open menu"
+          alt="close menu"
           width={40}
           height={40}
           className={

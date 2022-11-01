@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         <div className="cta">
-          <Link href="/destination">
+          <Link href="/destination" className="link">
             <div className="button button--cta">Explore</div>
           </Link>
         </div>

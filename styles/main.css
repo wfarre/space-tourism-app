@@ -288,7 +288,18 @@
     line-height: 32px;
   }
 }
+.header .cta {
+  display: flex;
+  justify-content: center;
+}
+.header .cta .link {
+  text-decoration: none;
+  color: #0b0d17;
+}
 .header .cta .button--cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 150px;
   width: 150px;
   margin-top: 81px;
@@ -299,6 +310,7 @@
   text-transform: uppercase;
   letter-spacing: 1.25px;
   font-size: 20px;
+  text-decoration: none;
 }
 @media all and (min-width: 420px) {
   .header .cta .button--cta {

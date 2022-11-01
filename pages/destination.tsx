@@ -92,6 +92,7 @@ const Destination = (props: Props) => {
       <Header index={"01"} title={"Pick your destination"} />
       <main className="main">
         <section className="section section--planet">
+          <h2 hidden>Destination</h2>
           <div className="carousel">
             <div className="carousel__nav">
               <div
