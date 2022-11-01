@@ -18,7 +18,7 @@ const Slide = (props: Props) => {
         <Image
           className="image"
           src={"/" + props.img}
-          alt="planet image"
+          alt={props.img}
           width={40}
           height={40}
         />
