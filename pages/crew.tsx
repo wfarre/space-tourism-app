@@ -9,6 +9,7 @@ import Head from "next/head";
 import bgImgMobile from "../public/assets/crew/background-crew-mobile.jpg";
 import bgImgTablet from "../public/assets/crew/background-crew-mobile.jpg";
 import bgImgDesktop from "../public/assets/crew/background-crew-desktop.jpg";
+// import { Html } from "next/document";
 
 type Props = {};
 
@@ -53,6 +54,8 @@ const Crew = (props: Props) => {
   return (
     <div>
       <Head>
+        {/* <Html lang="en" /> */}
+        <html lang="en" />
         <title>Space Tourism - Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

@@ -12,6 +12,7 @@ export default function Home() {
   return (
     <div>
       <Head>
+        <html lang="en" />
         <title>Space Tourism - Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
