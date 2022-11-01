@@ -59,7 +59,7 @@ const Technology = (props: Props) => {
       <Navbar />
       <Image
         className="image"
-        src={"/../assets/destination/image-mars.png"}
+        src={"/assets/destination/image-mars.png"}
         alt="planet image"
         width={40}
         height={40}
