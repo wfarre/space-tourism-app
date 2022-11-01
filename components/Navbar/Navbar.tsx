@@ -3,7 +3,10 @@ import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 
-const Navbar = () => {
+type Props = {
+  page: string;
+};
+const Navbar = (props: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => {
@@ -23,30 +26,50 @@ const Navbar = () => {
       </div>
       <div className={isOpen ? "navbar-wrapper" : "navbar-wrapper hide"}>
         <ul className="navbar">
-          <li className="navbar__item">
+          <li
+            className={
+              props.page === "home" ? "navbar__item active" : "navbar__item"
+            }
+          >
             <Link href={"/"} legacyBehavior>
-              <a className="navbar__item__title">
+              <a className={"navbar__item__title"}>
                 <span className="navbar__item__id">00</span>Home
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li
+            className={
+              props.page === "destination"
+                ? "navbar__item active"
+                : "navbar__item"
+            }
+          >
             <Link href={"/destination"} legacyBehavior>
-              <a className="navbar__item__title">
+              <a className={"navbar__item__title"}>
                 <span className="navbar__item__id">01</span>Destination
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li
+            className={
+              props.page === "crew" ? "navbar__item active" : "navbar__item"
+            }
+          >
             <Link href={"/crew"} legacyBehavior>
-              <a className="navbar__item__title">
+              <a className={"navbar__item__title"}>
                 <span className="navbar__item__id">02</span>Crew
               </a>
             </Link>
           </li>
-          <li className="navbar__item">
+          <li
+            className={
+              props.page === "technology"
+                ? "navbar__item active"
+                : "navbar__item"
+            }
+          >
             <Link href={"/technology"} legacyBehavior>
-              <a className="navbar__item__title">
+              <a className={"navbar__item__title"}>
                 <span className="navbar__item__id">03</span>Technology
               </a>
             </Link>

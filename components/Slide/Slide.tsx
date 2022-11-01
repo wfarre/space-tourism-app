@@ -18,8 +18,9 @@ const Slide = (props: Props) => {
           className="image"
           src={"/" + props.img}
           alt={props.img}
-          width={40}
-          height={40}
+          fill
+          // width={1000}
+          // height={1000}
         />
       </div>
 

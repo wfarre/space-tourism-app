@@ -59,7 +59,7 @@ const Crew = (props: Props) => {
         fill
         className="bg-img bg-img--desktop"
       />
-      <Navbar />
+      <Navbar page={"crew"} />
       <Header index={"02"} title={"Meet your crew"} />
 
       <section className="section section--crew">

@@ -83,7 +83,7 @@ const Destination = (props: Props) => {
         fill
         className="bg-img bg-img--desktop"
       />
-      <Navbar />
+      <Navbar page={"destination"} />
       <Header index={"01"} title={"Pick your destination"} />
       <main className="main">
         <section className="section section--planet">

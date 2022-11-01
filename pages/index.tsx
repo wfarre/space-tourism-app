@@ -34,7 +34,7 @@ export default function Home() {
       />
       {/* <h1 className="main">Hello World</h1> */}
 
-      <Navbar />
+      <Navbar page={"home"} />
 
       <header className="header">
         <div className="header__info">

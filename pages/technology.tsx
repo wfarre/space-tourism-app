@@ -68,7 +68,7 @@ const Technology = (props: Props) => {
         fill
         className="bg-img bg-img--desktop"
       />
-      <Navbar />
+      <Navbar page={"technology"} />
       <Header index={"03"} title={"Space launch 101"} />
       <main className="main">
         <section className="section section--technology">
