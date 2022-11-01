@@ -4,6 +4,10 @@ import Navbar from "../components/Navbar/Navbar";
 import Slide from "../components/Slide/Slide";
 import Image from "next/image";
 
+import bgImgMobile from "../public/assets/technology/background-technology-mobile.jpg";
+import bgImgTablet from "../public/assets/technology/background-technology-mobile.jpg";
+import bgImgDesktop from "../public/assets/technology/background-technology-desktop.jpg";
+
 type Props = {};
 
 const Technology = (props: Props) => {
@@ -56,14 +60,15 @@ const Technology = (props: Props) => {
 
   return (
     <div>
-      <Navbar />
+      <Image alt="" src={bgImgMobile} fill className="bg-img bg-img--mobile" />
+      <Image alt="" src={bgImgTablet} fill className="bg-img bg-img--tablet" />
       <Image
-        className="image"
-        src={"/assets/destination/image-mars.png"}
-        alt="planet image"
-        width={40}
-        height={40}
+        alt=""
+        src={bgImgDesktop}
+        fill
+        className="bg-img bg-img--desktop"
       />
+      <Navbar />
       <Header index={"03"} title={"Space launch 101"} />
       <main className="main">
         <section className="section section--technology">

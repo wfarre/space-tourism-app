@@ -6,10 +6,20 @@
   top: 0;
   left: 0;
   &--mobile {
+    @include tablet-only() {
+      display: none;
+    }
+  }
+  &--tablet {
+    display: none;
+    @include tablet-only {
+      display: block;
+    }
     @include desktop-only() {
       display: none;
     }
   }
+
   &--desktop {
     display: none;
     @include desktop-only() {

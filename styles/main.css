@@ -324,8 +324,21 @@
   top: 0;
   left: 0;
 }
-@media all and (min-width: 900px) {
+@media all and (min-width: 420px) {
   .bg-img--mobile {
+    display: none;
+  }
+}
+.bg-img--tablet {
+  display: none;
+}
+@media all and (min-width: 420px) {
+  .bg-img--tablet {
+    display: block;
+  }
+}
+@media all and (min-width: 900px) {
+  .bg-img--tablet {
     display: none;
   }
 }

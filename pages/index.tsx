@@ -1,10 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
-// import styles from '../styles/Home.module.css'
-// import '@reach/Home.css'
-// import { ReactComponent as Logo } from "../assets/shared/logo.svg";
+
 import bgImgMobile from "../public/assets/home/background-home-mobile.jpg";
+import bgImgTablet from "../public/assets/home/background-home-mobile.jpg";
 import bgImgDesktop from "../public/assets/home/background-home-desktop.jpg";
 
 import Navbar from "../components/Navbar/Navbar";
@@ -19,6 +17,13 @@ export default function Home() {
         src={bgImgMobile}
         fill
         className="bg-img bg-img--mobile"
+      />
+      <Image
+        alt=""
+        // src="/../public/assets/background-home-desktop.jpg"
+        src={bgImgTablet}
+        fill
+        className="bg-img bg-img--tablet"
       />
       <Image
         alt=""

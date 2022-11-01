@@ -3,6 +3,12 @@ import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Slide from "../components/Slide/Slide";
 
+import Image from "next/image";
+
+import bgImgMobile from "../public/assets/crew/background-crew-mobile.jpg";
+import bgImgTablet from "../public/assets/crew/background-crew-mobile.jpg";
+import bgImgDesktop from "../public/assets/crew/background-crew-desktop.jpg";
+
 type Props = {};
 
 const Crew = (props: Props) => {
@@ -45,6 +51,14 @@ const Crew = (props: Props) => {
 
   return (
     <div>
+      <Image alt="" src={bgImgMobile} fill className="bg-img bg-img--mobile" />
+      <Image alt="" src={bgImgTablet} fill className="bg-img bg-img--tablet" />
+      <Image
+        alt=""
+        src={bgImgDesktop}
+        fill
+        className="bg-img bg-img--desktop"
+      />
       <Navbar />
       <Header index={"02"} title={"Meet your crew"} />
 
