@@ -20,7 +20,6 @@ const Navbar = () => {
           width={48}
           height={48}
         ></Image>
-        {/* <Logo /> */}
       </div>
       <div className={isOpen ? "navbar-wrapper" : "navbar-wrapper hide"}>
         <ul className="navbar">

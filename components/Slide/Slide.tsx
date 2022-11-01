@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import slidePic from "/" + props.img
 
 type Props = {
   name: string;
