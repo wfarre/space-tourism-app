@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../components/Header/Header";
 import Navbar from "../components/Navbar/Navbar";
 import Slide from "../components/Slide/Slide";
+import Image from "next/image";
 
 type Props = {};
 
@@ -56,6 +57,13 @@ const Technology = (props: Props) => {
   return (
     <div>
       <Navbar />
+      <Image
+        className="image"
+        src={"/./assets/destination/image-mars.png"}
+        alt="planet image"
+        width={40}
+        height={40}
+      />
       <Header index={"03"} title={"Space launch 101"} />
       <main className="main">
         <section className="section section--technology">
