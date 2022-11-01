@@ -3,21 +3,25 @@
   text-align: center;
   margin-top: 48px;
 
+  @include tablet-only {
+    margin-top: 106px;
+  }
+
   @include desktop-only() {
-    // position: absolute;
     margin: 0 11.46%;
     margin-top: 28vh;
-    // margin-top: 0;
-    // top: 43vh;
-    // left: 165px;
     text-align: left;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
   }
   &__info {
-    @include desktop-only() {
+    @include tablet-only() {
       width: 450px;
+      margin: 0 auto;
+    }
+    @include desktop-only {
+      margin: 0;
     }
     &__sub {
       font-family: $font-subtitle;
@@ -25,24 +29,36 @@
       text-transform: uppercase;
       margin: 0;
       font-weight: 400;
+      letter-spacing: 2.7px;
+
+      @include tablet-only {
+        font-size: 20px;
+        letter-spacing: 3.38px;
+      }
 
       @include desktop-only() {
         font-size: $subheading-main;
+        letter-spacing: 4.72px;
       }
     }
     &__main {
+      margin-top: 16px;
+      margin-bottom: 16px;
       font-family: $font-title;
       font-size: $heading-main-mobile;
       text-transform: uppercase;
       font-weight: 400;
       color: $color-primary;
-      margin-top: 16px;
-      margin-bottom: 16px;
-      @include desktop-only() {
+
+      @include tablet-only() {
         font-size: $heading-main;
-        margin-top: 6.4vh;
-        margin-bottom: 2.7vh;
+        margin: 24px 0;
       }
+
+      // @include desktop-only {
+      //   margin-top: 6.4vh;
+      //   margin-bottom: 2.7vh;
+      // }
     }
     &__text {
       font-weight: 100;
@@ -51,29 +67,34 @@
       @include desktop-only() {
         line-height: 32px;
       }
-
-      // font-family: "B;
     }
   }
 
   .cta {
     .button--cta {
+      height: 150px;
+      width: 150px;
+      margin-top: 81px;
+      border: none;
+      border-radius: 100%;
       background-color: $color-primary;
       font-family: $font-title;
       text-transform: uppercase;
       letter-spacing: 1.25px;
       font-size: 20px;
-      height: 150px;
-      width: 150px;
-      border: none;
-      border-radius: 100%;
-      margin-top: 81px;
+
+      @include tablet-only {
+        height: 242px;
+        width: 242px;
+        margin-top: 156px;
+        font-size: 32px;
+      }
 
       @include desktop-only() {
         position: relative;
-        font-size: 32px;
         height: 274px;
         width: 274px;
+
         z-index: 1;
         &:hover {
           cursor: pointer;

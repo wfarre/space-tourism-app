@@ -3,7 +3,13 @@
 // </style>
 //variables
 @mixin desktop-only {
-  @media all and (min-width: 800px) {
+  @media all and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media all and (min-width: 420px) {
     @content;
   }
 }
@@ -13,24 +19,21 @@
 @import "./pages/header-home";
 @import "./layout/background";
 @import "./layout/page-header";
+@import "./components/carousel";
+@import "./components/slide";
 
 body {
-  font-family: $font-text;
-  background-color: $bg-color;
-  color: $color-primary;
-  font-size: $text-mobile;
   position: relative;
   height: 100vh;
   width: 100vw;
   margin: 0;
+  background-color: $bg-color;
   color: $color-secondary;
+  font-family: $font-text;
+  font-size: $text-mobile;
   font-weight: 100;
   @include desktop-only() {
     font-size: $text;
     position: relative;
   }
 }
-
-@import "./components/carousel";
-@import "./components/slide";
-@import "./layout/sections";

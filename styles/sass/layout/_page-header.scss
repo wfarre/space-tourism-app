@@ -1,12 +1,14 @@
 .page-header {
   text-align: center;
-  // margin-bottom: 32px;
   margin-top: 24px;
-  @include desktop-only {
+
+  @include tablet-only {
     text-align: left;
+    margin-top: 40px;
+    margin-left: 39px;
+  }
+  @include desktop-only {
     margin-left: 165px;
-    // margin-bottom: 97px;
-    // margin-bottom: -56px;
     margin-top: 76px;
   }
   &__title {

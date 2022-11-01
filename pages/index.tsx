@@ -8,6 +8,7 @@ import bgImgMobile from "../public/assets/home/background-home-mobile.jpg";
 import bgImgDesktop from "../public/assets/home/background-home-desktop.jpg";
 
 import Navbar from "../components/Navbar/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,7 +44,9 @@ export default function Home() {
         </div>
 
         <div className="cta">
-          <button className="button button--cta">Explore</button>
+          <Link href="/destination">
+            <button className="button button--cta">Explore</button>
+          </Link>
         </div>
       </header>
     </div>

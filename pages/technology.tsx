@@ -9,11 +9,10 @@ const Technology = (props: Props) => {
   const [data, setData] = useState([]);
   const [error, setError] = useState();
   const [index, setIndex] = useState(0);
-  const [desktop, setDesktop] = useState(true);
 
   const [matches, setMatches] = useState(
     typeof window !== "undefined" &&
-      window.matchMedia("(min-width: 768px)").matches
+      window.matchMedia("(min-width: 900px)").matches
   );
 
   useEffect(() => {
@@ -23,7 +22,11 @@ const Technology = (props: Props) => {
       .catch((error) => setError(error));
   }, []);
 
-  console.log(data);
+  useEffect(() => {
+    window
+      .matchMedia("(min-width: 900px)")
+      .addEventListener("change", (e) => setMatches(e.matches));
+  }, []);
 
   //Handle the error state
   if (error) return <div>Failed to load</div>;
@@ -49,14 +52,6 @@ const Technology = (props: Props) => {
 
     setIndex(index);
   };
-
-  useEffect(() => {
-    window
-      .matchMedia("(min-width: 768px)")
-      .addEventListener("change", (e) => setMatches(e.matches));
-  }, []);
-  // }
-  console.log(matches);
 
   return (
     <div>

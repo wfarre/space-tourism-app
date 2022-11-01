@@ -1,15 +1,14 @@
 .carousel {
-  // width: calc(100% - 48px);
-  // width: fit-content;
   position: relative;
   width: 100%;
   height: 100%;
-
   margin-top: 32px;
+  @include tablet-only {
+    margin-top: 60px;
+  }
   @include desktop-only() {
     margin-top: 97px;
   }
-
   .carousel__nav {
     position: absolute;
     display: flex;
@@ -20,13 +19,16 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 800;
+
+    @include tablet-only {
+      top: 353px;
+    }
+
     @include desktop-only() {
       position: absolute;
       top: 0;
       left: 832px;
       transform: translateX(0);
-
-      // margin-top: 64px;
     }
     .dot {
       content: "";
@@ -34,28 +36,43 @@
       height: 10px;
       border-radius: 100%;
       background-color: $color-primary;
-      opacity: 0.5;
+      opacity: 0.2;
+      &:hover {
+        cursor: pointer;
+        opacity: 0.5;
+      }
     }
     .active {
-      // background-color: blue;
       opacity: 1;
     }
     .option {
+      position: relative;
+      &:hover {
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: $color-primary;
+          opacity: 0.2;
+        }
+      }
       &__name {
-        text-transform: uppercase;
         font-size: 14px;
         color: $color-secondary;
         font-weight: 100;
         font-family: "Barlow Condensed";
+        text-transform: uppercase;
         letter-spacing: 2.36px;
-
-        @include desktop-only() {
+        @include tablet-only() {
           font-size: 16px;
           letter-spacing: 2.7px;
         }
       }
     }
-
     .active {
       position: relative;
       .option__name {
@@ -73,15 +90,94 @@
       }
     }
   }
-
   .carousel__viewport {
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+  }
+}
+
+.section {
+  &--crew {
+    .carousel {
+      // @include tablet-only {
+      //   margin-top: 60px;
+      // }
+      &__nav {
+        top: 287px;
+        @include tablet-only {
+          top: 282px;
+        }
+        @include desktop-only {
+          top: auto;
+          bottom: 94px;
+          left: 165px;
+        }
+        .active {
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &--technology {
+    .carousel {
+      @include desktop-only {
+        width: calc(100% - $padding-lr-desktop);
+        padding: 0 0 0 $padding-lr-desktop;
+        margin-top: 26px;
+      }
+      &__nav {
+        top: 204px;
+        @include tablet-only {
+          top: 366px;
+        }
+        @include desktop-only {
+          flex-direction: column;
+          left: 165px;
+          top: calc(137px - 26px);
+        }
+        .dot {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          width: 40px;
+          background-color: transparent;
+          color: $color-primary;
+          border: 1px solid rgb(255, 255, 255, 0.1);
+          opacity: 1;
+          column-gap: 16px;
+          @include tablet-only {
+            height: 60px;
+            width: 60px;
+          }
+          @include desktop-only {
+            height: 80px;
+            width: 80px;
+          }
+          &:hover {
+            border: 1px solid rgb(255, 255, 255, 1);
+            cursor: pointer;
+          }
+        }
+        .active {
+          background-color: $color-primary;
+          color: $bg-color;
+          border: 1px solid rgb(255, 255, 255, 1);
+          font-family: "Bellefair";
+          font-size: 16px;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
