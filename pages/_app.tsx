@@ -13,6 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
     //   <title>Space Tourism - Home</title>
     //   <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     // </Head>
+    // <Html lang="en">
     <Component {...pageProps} />
+    // </Html>
   );
 }
